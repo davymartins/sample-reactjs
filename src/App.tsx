@@ -1,17 +1,16 @@
 import React from 'react';
-import { Navbar } from 'react-bootstrap';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { About } from './pages/About';
-import { Contact } from './pages/Contact';
-import { Home } from './pages/Home';
-import { Portfolio } from './pages/Portfolio';
+import NavBar from './components/NavBar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import  About  from './pages/About';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Portfolio from './pages/Portfolio';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
       <BrowserRouter>
+        <NavBar/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -19,7 +18,6 @@ function App() {
           <Route path='/portfolio' element={<Portfolio />} />
         </Routes>
       </BrowserRouter>
-    </div>
   );
 }
 

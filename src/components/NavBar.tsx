@@ -1,20 +1,40 @@
 import React from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
- 
-export const NavBar = () => {
-    return (
-        <Navbar sticky='top' expand='lg'>
-            <Container>
-                <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
-                <Navbar.Collapse id='responsive-navbar-nav'/>
-                <Nav>
-                    <Link to='/'> Home </Link>
-                    <Link to='/about'> About </Link>
-                    <Link to='/contact'> Contact </Link>
-                    <Link to='/portfolio'> Portfolio </Link>
-                </Nav>
-            </Container>
-        </Navbar>
-    );
+import {
+  Nav,
+  NavLink,
+  Bars,
+  NavMenu,
+  NavBtn,
+  NavBtnLink
+} from './navbar/Elements';
+
+const NavBar = () => {
+  return (
+    <>
+      <Nav>
+        <NavLink to='/'>
+          <img src={require('../images/logo_marista.png')} alt='logo' />
+        </NavLink>
+        <Bars />
+        <NavMenu>
+          <NavLink to='/about'>
+            Sobre
+          </NavLink>
+          <NavLink to='/contact'>
+            Contato
+          </NavLink>
+          <NavLink to='/portfolio'>
+            Portfolio
+          </NavLink>
+          {/* Second Nav */}
+          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+        </NavMenu>
+        <NavBtn>
+          <NavBtnLink to='/signin'>Login</NavBtnLink>
+        </NavBtn>
+      </Nav>
+    </>
+  );
 };
+
+export default NavBar;

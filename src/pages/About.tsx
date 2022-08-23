@@ -1,13 +1,18 @@
 import React from 'react';
-import { NavBar } from '../components/NavBar';
  
-export const About = () => {
+const About = () => {
     return (
-        <div>
-        <NavBar/>
-        <br/>
-        <h1>About</h1>         
+        <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '90vh'
+      }}
+    >
+      <h1>Sobre</h1>
     </div>
     );   
 };
  
+export default About;

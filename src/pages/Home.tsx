@@ -1,14 +1,18 @@
 import React from 'react';
-import { NavBar } from '../components/NavBar';
  
-export const Home = () => {
+const Home = () => {
     return (
-        <div>
-            <NavBar/>
-            <br/>
-            <h1>Home</h1>     
-            <br/>
-            <a href='http://localhost:3000/portfolio'>portfolio</a>    
+        <div
+            style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '90vh'
+            }}
+            >
+            <h1>Home</h1>
         </div>
     );   
 };
+
+export default Home;
